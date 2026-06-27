@@ -1,60 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SSSGCSA Bhajan Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhajan Search</title>
 
-  <!-- Poppins Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="background"></div>
+
 <div class="app">
 
-  <!-- TOP NAVBAR -->
-  <div class="topbar">
+  <!-- HOME VIEW -->
+  <div class="home" id="homeView">
+    <h1>Sai Bhajan Library</h1>
 
-    <div class="logo-section">
-      <img src="logo.png" alt="SSSGCSA Logo" class="logo"/>
-      <div class="brand-text">
-        <h2>SSSGCSA</h2>
-        <p>Sri Sathya Sai Global Council South Africa</p>
-      </div>
-    </div>
+    <input id="searchBox" type="text" placeholder="Search bhajans..." />
+    <button onclick="searchBhajans()">Search</button>
 
-    <div class="menu">
-      <div class="menu-item active">Browse Bhajans</div>
-      <div class="menu-item">About</div>
-      <div class="menu-item">Contact</div>
-    </div>
-
+    <p class="hint">Try: Sai, Baba, Om, Rama</p>
   </div>
 
-  <!-- MAIN -->
-  <div class="main">
+  <!-- RESULTS VIEW -->
+  <div class="results hidden" id="resultsView"></div>
 
-    <div class="header">
-      <h1>Bhajan Library</h1>
-      <input id="search" type="text" placeholder="Search bhajans..."/>
-    </div>
-
-    <div class="content">
-
-      <!-- LEFT LIST -->
-      <div class="list" id="bhajanList"></div>
-
-      <!-- RIGHT DETAIL -->
-      <div class="detail" id="bhajanDetail">
-        <h2>Select a bhajan</h2>
-        <p>Click on a bhajan to view details</p>
-      </div>
-
-    </div>
-  </div>
+  <!-- DETAIL VIEW -->
+  <div class="detail hidden" id="detailView"></div>
 
 </div>
 
