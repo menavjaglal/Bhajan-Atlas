@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f4f2;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #7a1f1f;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.logo-section h2 {
+  margin-top: 10px;
+}
+
+.logo-section p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.menu {
+  margin-top: 40px;
+}
+
+.menu-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+}
+
+.menu-item.active {
+  background: white;
+  color: #7a1f1f;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #7a1f1f;
+}
+
+.header input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* LIST */
+.list {
+  width: 40%;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-left: 5px solid #7a1f1f;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* DETAIL */
+.detail {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f0e6e6;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.lyrics {
+  margin-top: 20px;
+  white-space: pre-line;
+}
