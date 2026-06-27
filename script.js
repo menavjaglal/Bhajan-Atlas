@@ -1,20 +1,12 @@
 const bhajans = [
   {
-    title: "Sathya Sai Padambujam",
-    lyrics: "Sathya Sai Padambujam Bhajorey Manasa Nirantharam
-Parama Pavitram Pavana Charanam
-Kalimala Dahanam Sri Guru Charanam
-Bhava Bhaya Nashana Duritha Nivarana
-Parthi Pureeshwara Pankaja Charanam
-Bhajorey Manasa Nirantharam
-Bhajorey Manasa Nirantharam (2)",
-    meaning: "Meditate incessantly upon the most holy and auspicious Lotus Feet of Lord Sathya Sai, the Feet of the Divine Preceptor, which will eradicate the sins of this Kali age, the Feet, which will destroy all the fears of this materialistic world and remove the obstacles."
+    title: "Om Sai Ram",
+    lyrics: "Om Sai Ram Om Sai Ram...",
+    meaning: "A mantra invoking Sai Baba for peace and protection."
   },
   {
-    title: "Mata Mata Sai Mata",
-    lyrics: "Mata Mata Sai Mata
-      Jagatha Mata Sai Vishwa Mata Mata mata Sai Mata Durga Bhavani Kaali KapaliniShanthi Dayini Sai Mata
-",
+    title: "Sai Namavali",
+    lyrics: "Sai Ram Sai Shyam...",
     meaning: "Devotional chant praising Sai Baba’s divine presence."
   },
   {
@@ -23,6 +15,11 @@ Bhajorey Manasa Nirantharam (2)",
     meaning: "A prayer praising Lord Rama for righteousness."
   }
 ];
+
+// Attach event AFTER page loads
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("searchBtn").addEventListener("click", searchBhajans);
+});
 
 function searchBhajans() {
   const query = document.getElementById("searchBox").value.toLowerCase();
@@ -37,7 +34,12 @@ function searchBhajans() {
     b.title.toLowerCase().includes(query)
   );
 
-  filtered.forEach((b, i) => {
+  if (filtered.length === 0) {
+    results.innerHTML = "<p>No bhajans found</p>";
+    return;
+  }
+
+  filtered.forEach(b => {
     const div = document.createElement("div");
     div.className = "result-item";
     div.innerText = b.title;
